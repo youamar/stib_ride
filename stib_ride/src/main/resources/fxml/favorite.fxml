@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import org.controlsfx.control.SearchableComboBox?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="335.0" prefWidth="409.0" style="-fx-background-color: #daf1ff;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+    <Text layoutX="17.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Favorite routes management between :" textAlignment="CENTER">
+        <font>
+            <Font name="Arial" size="22.0" />
+        </font>
+    </Text>
+    <SearchableComboBox fx:id="searchOrigin" layoutX="119.0" layoutY="124.0" style="-fx-color: #bce0f4;" />
+    <SearchableComboBox fx:id="searchDestination" layoutX="119.0" layoutY="181.0" style="-fx-color: #bce0f4;" />
+    <Text layoutX="121.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Origin : " />
+    <Text layoutX="121.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Destination :" />
+    <TextField fx:id="routeName" layoutX="119.0" layoutY="241.0" prefHeight="25.0" prefWidth="175.0" />
+    <Text layoutX="119.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Route name :" />
+    <Button fx:id="saveBt" layoutX="40.0" layoutY="296.0" mnemonicParsing="false" onAction="#saveFavorite" prefHeight="25.0" prefWidth="101.0" style="-fx-color: #bde1f5;" text="Save" />
+    <Button fx:id="deleteBt" layoutX="154.0" layoutY="296.0" mnemonicParsing="false" onAction="#deleteFavorite" prefHeight="25.0" prefWidth="101.0" style="-fx-color: #bde1f5;" text="Delete" />
+    <Text fx:id="message" fill="#fa0b22" layoutX="18.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="373.25225830078125" />
+    <Button fx:id="searchBt" layoutX="268.0" layoutY="296.0" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="101.0" style="-fx-color: #bde1f5;" text="Search" />
+   <ImageView fitHeight="78.0" fitWidth="70.0" layoutX="18.0" layoutY="133.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../images/logo.png" />
+      </image>
+   </ImageView>
+</Pane>

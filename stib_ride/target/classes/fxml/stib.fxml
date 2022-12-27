@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CustomMenuItem?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.SearchableComboBox?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="932.0" style="-fx-background-color: #daf1ff;" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <effect>
+        <Blend />
+    </effect>
+    <ScrollPane layoutX="6.0" layoutY="34.0" prefHeight="358.0" prefWidth="919.0">
+        <ImageView fitHeight="855.0" fitWidth="1884.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../images/metro.gif" />
+        </ImageView>
+    </ScrollPane>
+    <TableView fx:id="table" layoutX="305.0" layoutY="408.0" prefHeight="268.0" prefWidth="571.0">
+        <columns>
+            <TableColumn fx:id="stationCol" prefWidth="285.5998840332031" style="-fx-color: #bbdff4;" text="Stations" />
+            <TableColumn fx:id="lineCol" minWidth="0.0" prefWidth="284.5999755859375" style="-fx-color: #bbdff4;" text="Lines" />
+        </columns>
+    </TableView>
+    <ImageView fitHeight="98.0" fitWidth="84.0" layoutX="106.0" layoutY="399.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../images/logo.png" />
+    </ImageView>
+    <Label layoutX="114.0" layoutY="506.0" text="Origin :" underline="true">
+        <font>
+            <Font name="System Bold" size="14.0" />
+        </font>
+    </Label>
+    <Label layoutX="101.0" layoutY="569.0" text="Destination :" underline="true">
+        <font>
+            <Font name="System Bold" size="14.0" />
+        </font>
+    </Label>
+    <MenuBar layoutY="1.0" prefHeight="26.0" prefWidth="930.0" style="-fx-background-color: #c3e6fa;">
+        <Menu mnemonicParsing="false" text="App">
+            <MenuItem fx:id="quit" mnemonicParsing="false" text="quit" />
+        </Menu>
+        <Menu fx:id="favoriteRoutesMenu" mnemonicParsing="false" text="Favorite routes">
+            <CustomMenuItem fx:id="menuScroll" mnemonicParsing="false" text="menuScroll" />
+        </Menu>
+      <Menu fx:id="languagesMenu" mnemonicParsing="false" text="Edit">
+        <items>
+          <MenuItem fx:id="dutchStations" mnemonicParsing="false" onAction="#changeToDutch" text="stations in dutch" />
+        </items>
+      </Menu>
+    </MenuBar>
+    <Label fx:id="nbStations" layoutX="812.0" layoutY="699.0" textFill="#595959">
+        <font>
+            <Font size="10.0" />
+        </font>
+    </Label>
+    <Label fx:id="searchStatus" layoutX="14.0" layoutY="699.0" textFill="#595959">
+        <font>
+            <Font size="10.0" />
+        </font>
+    </Label>
+   <Label fx:id="changeLine" layoutX="307.0" layoutY="699.0" prefHeight="15.0" prefWidth="446.0" textFill="#595959">
+      <font>
+         <Font size="10.0" />
+      </font>
+   </Label>
+    <Button fx:id="searchBt" layoutX="90.0" layoutY="634.0" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="105.0" style="-fx-color: #badef3;" text="Search" />
+    <SearchableComboBox fx:id="searchOrigin" layoutX="53.0" layoutY="532.0" style="-fx-color: #badff3;" />
+    <SearchableComboBox fx:id="searchDestination" layoutX="55.0" layoutY="594.0" style="-fx-color: #badff3;" />
+    <Button fx:id="favoriteBt" layoutX="73.0" layoutY="664.0" mnemonicParsing="false" onAction="#favorite" prefHeight="25.0" prefWidth="133.0" style="-fx-color: #badef3;" text="Add to favorite routes" />
+</Pane>
